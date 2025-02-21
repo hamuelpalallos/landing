@@ -15,6 +15,15 @@ const isDark = computed(() => useColorMode().value == 'dark')
 
 <template>
   <div class="relative">
+    <UPageSection>
+      <NuxtLink to="/.well-known/assetlinks.json">
+        <UButton>Well Known asset links</UButton>
+      </NuxtLink>
+      <NuxtLink to="/tickets/someID">
+        <UButton>Tickets/ID</UButton>
+      </NuxtLink>
+    </UPageSection>
+
     <UPageHero
       :title="page.hero.title"
       :description="page.hero.description"

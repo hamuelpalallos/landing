@@ -20,14 +20,16 @@ export default defineNuxtConfig({
     }
   },
 
-  mdc: {
-    highlight: {
-      noApiRoute: false
-    }
-  },
+  // mdc: {
+  //   highlight: {
+  //     noApiRoute: false
+  //   }
+  // },
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { prerender: true },
+    '/tickets/id': { prerender: true }
+    // '/.well-known/assetlinks.json': { prerender: true }
   },
 
   future: {
@@ -37,9 +39,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-15',
 
   nitro: {
-    prerender: {
-      crawlLinks: true
-    },
+    // prerender: {
+    //   crawlLinks: true
+    // },
     preset: 'firebase',
     firebase: {
       gen: 2,
