@@ -1,0 +1,36 @@
+{
+  "functions": {
+    "source": ".output/server",
+    "codebase": "app_server",
+    "runtime": "nodejs20",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log"
+    ]
+  },
+  "hosting": {
+    "public": ".output/public",
+    "site": "tripket-ph-app",
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "server"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
